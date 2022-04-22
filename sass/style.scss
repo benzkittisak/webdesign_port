@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@mixin mp0 {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin spanYear {
+  color: white;
+  background-color: black;
+  font-weight: 300;
+  padding: 5px 30px;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+body {
+  font-family: "Kanit", sans-serif !important;
+}
+
+.my-header {
+  text-align: right;
+  display: block;
+  padding: 20px 0 0 10px;
+  border-bottom: 1px solid lightgrey;
+  letter-spacing: 4px;
+}
+
+.navbar-section {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding: 15px 10px;
+  box-shadow: 0 4px 20px rgba($color: black, $alpha: 0.05);
+
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar-left {
+      width: 100%;
+
+      .navbar-brand {
+        color: black;
+        font-weight: 600;
+      }
+      .toggle-bars {
+        padding-right: 20px;
+
+        button {
+          background: none !important;
+          border: none;
+        }
+      }
+    }
+    .navbar-center {
+      width: 100%;
+      ul.navbar-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        & > li > a {
+          text-decoration: none;
+          line-height: 32px;
+          font-size: 16px;
+          display: block;
+          color: black;
+          margin: 0 20px;
+          font-weight: 400;
+        }
+      }
+    }
+    .navbar-right {
+      width: 100%;
+    }
+  }
+}
+
+#home.home-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 60px;
+  display: flex;
+  z-index: 99;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  .home-hello {
+    width: 100%;
+    position: relative;
+
+    h4 {
+      @include mp0;
+      font-size: 24px;
+    }
+
+    h1 {
+      @include mp0;
+      font-size: 70px;
+    }
+
+    p {
+      @include mp0;
+    }
+
+    .home-social-media {
+      width: 100%;
+      display: block;
+      padding-top: 40px;
+
+      .social-media {
+        list-style-type: none;
+        @include mp0;
+        display: flex;
+        gap: 20px;
+
+        & > li > a {
+          color: #a1a1a1;
+          font-size: 20px;
+          display: block;
+          transition: 0.4s ease-in-out;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .home-photo-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #ffbe40;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba($color: #000000, $alpha: 0.1);
+  }
+  .home-photo-img {
+    position: absolute;
+    right: -15%;
+    top: 50%;
+    z-index: -1;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    max-width: 70%;
+  }
+}
+
+#about.about-me {
+  margin-top: 40px;
+  padding-bottom: 50px;
+  .my-header {
+    margin-top: 30px;
+  }
+
+  .about-me-profile-image {
+    padding: 20px;
+
+    img {
+      box-shadow: 10px 10px 0 0 rgb(209, 243, 255);
+    }
+  }
+  .about-be-text {
+    font-weight: 400;
+    line-height: 32px;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .edu-section {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+    .edu-year {
+      @include spanYear;
+    }
+
+    h2 {
+      margin-top: 15px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  .more-section {
+    position: relative;
+    display: block;
+    padding-top: 320px;
+    text-align: center;
+
+    .btn-more {
+      text-decoration: none;
+      background: black;
+      color: white;
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: 300;
+      border: 1px solid black;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+}
+
+.exp-section {
+  position: relative;
+  display: block;
+  margin-top: 30px;
+
+  p.exp-content {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+  }
+  .exp-year {
+    @include spanYear;
+  }
+  .exp-container {
+    position: relative;
+    width: 100%;
+    display: block;
+    h2 {
+      margin-top: 15px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+  img.exp-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    box-shadow: 10px 10px 0 rgb(255, 255, 214);
+  }
+}
+
+#favorites.favorites {
+  position: relative;
+  margin: 50px 0;
+  .fav-content {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    .fav-icon {
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+#sidebar.sidebar {
+  position: fixed;
+  height: 100vh;
+  z-index: 999;
+  width: 290px;
+  background-color: white;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  padding: 60px 20px;
+  top: 0;
+  left: -50%;
+  box-shadow: 6px 0 28px rgba($color: black, $alpha: 0.05);
+
+  .btn-toggle-close {
+    color: black;
+    font-size: 24px;
+  }
+
+  .sidebar-list {
+    list-style: none;
+    @include mp0;
+    position: relative;
+    & > li > a {
+      display: block;
+      color: rgb(117, 117, 117);
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 300;
+      margin-top: 30px;
+      padding: 10px 32px;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+.footer {
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  #home.home-section {
+    height: 90vh;
+    .home-hello {
+      h1 {
+        font-size: 40px;
+      }
+      .home-social-media {
+        position: absolute;
+        bottom: -230%;
+        .social-media {
+          flex-direction: column;
+        }
+      }
+    }
+    .home-photo-circle {
+      left: 50%;
+      bottom: 8%;
+      width: 125px;
+      height: 125px;
+    }
+    img.home-photo-img {
+      width: 100%;
+      max-width: 100%;
+      right: -30%;
+    }
+  }
+
+  #about.about-me {
+    .about-be-text {
+      text-align: center;
+      font-weight: 300;
+    }
+
+    .exp-section {
+      img.exp-img {
+        width: 275px;
+        height: 275px;
+        right: -20%;
+        box-shadow: none;
+      }
+    }
+
+    .more-section {
+      padding-top: 250px;
+    }
+  }
+
+  #favorites.favorites {
+    .fav-content {
+      justify-content: flex-start;
+    }
+  }
+}
