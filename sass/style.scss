@@ -29,8 +29,10 @@ body {
 .navbar-section {
   width: 100%;
   display: block;
-  position: relative;
+  position: fixed;
   padding: 15px 10px;
+  background: white;
+  z-index: 9999;
   box-shadow: 0 4px 20px rgba($color: black, $alpha: 0.05);
 
   .container-fluid {
@@ -151,6 +153,7 @@ body {
     transform: translate(0, -50%);
     border-radius: 50%;
     max-width: 70%;
+    width:60%;
   }
 }
 
@@ -278,7 +281,7 @@ body {
   transition: 0.5s ease-in-out;
   padding: 60px 20px;
   top: 0;
-  left: -50%;
+  left: -290px;
   box-shadow: 6px 0 28px rgba($color: black, $alpha: 0.05);
 
   .btn-toggle-close {
