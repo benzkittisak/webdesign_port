@@ -17,7 +17,7 @@ body {
   position: fixed;
   padding: 15px 10px;
   background: white;
-  z-index: 9999;
+  z-index: 777;
   -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
